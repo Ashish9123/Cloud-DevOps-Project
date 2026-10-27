@@ -813,6 +813,6 @@ Feel free to reach out via any of the channels above!
 
 **⭐ If you find this project helpful, please consider giving it a star!**
 
-Made with ❤️ by [Omar Ghaly](https://github.com/omar-ghaly)
+Made with ❤️ by [Ashish kumar](https://github.com/Ashish9123)
 
 </div>
