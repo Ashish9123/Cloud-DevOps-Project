@@ -273,7 +273,7 @@ ssh-keygen -t rsa -b 4096 -f ~/.ssh/omar-key
 
 ### 1. Clone Repository
 ```bash
-git clone https://github.com/omar-ghaly/Cloud-DevOps-Project.git
+git clone https://github.com/Ashish9123/Cloud-DevOps-Project.git
 cd Cloud-DevOps-Project
 ```
 
@@ -295,7 +295,7 @@ ansible-playbook site.yaml -i dynamic_inventory.aws_ec2.yaml
 ```bash
 # Build Docker image
 cd ../docker/
-docker build -t omarghalyy/cloud-devops-app:latest .
+docker build -t ashishcb/cloud-devops-app:latest .
 
 # Deploy to Kubernetes
 cd ../kubernetes/
@@ -364,11 +364,11 @@ ansible all -i dynamic_inventory.aws_ec2.yaml -m ping
 
 # Run playbook
 ansible-playbook site.yaml -i dynamic_inventory.aws_ec2.yaml \
-  -u ec2-user --private-key ~/.ssh/omar-key.pem
+  -u ec2-user --private-key ~/.ssh/ashish-key.pem
 
 # Verify installations
 ansible all -i dynamic_inventory.aws_ec2.yaml \
-  -a "java -version" -u ec2-user --private-key ~/.ssh/omar-key.pem
+  -a "java -version" -u ec2-user --private-key ~/.ssh/ashish-key.pem
 ```
 
 **Services Configured:**
@@ -380,7 +380,7 @@ ansible all -i dynamic_inventory.aws_ec2.yaml \
 #### Access Jenkins
 ```bash
 # Get Jenkins initial password
-ssh -i ~/.ssh/omar-key.pem ec2-user@<EC2_PUBLIC_IP>
+ssh -i ~/.ssh/ashish-key.pem ec2-user@<EC2_PUBLIC_IP>
 sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 ```
 
@@ -393,10 +393,10 @@ sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 cd docker/
 
 # Build image
-docker build -t omarghalyy/cloud-devops-app:latest .
+docker build -t ashishcb/cloud-devops-app:latest .
 
 # Test locally
-docker run -p 5000:5000 omarghalyy/cloud-devops-app:latest
+docker run -p 5000:5000 ashishcb/cloud-devops-app:latest
 
 # Test endpoints
 curl http://localhost:5000
@@ -404,7 +404,7 @@ curl http://localhost:5000/health
 
 # Push to DockerHub
 docker login
-docker push omarghalyy/cloud-devops-app:latest
+docker push ashishcb/cloud-devops-app:latest
 ```
 
 ---
@@ -475,7 +475,7 @@ http://<EC2_PUBLIC_IP>:8080
 # In Jenkins UI:
 1. New Item → Pipeline
 2. Pipeline from SCM → Git
-3. Repository URL: https://github.com/omar-ghaly/Cloud-DevOps-Project.git
+3. Repository URL: https://github.com/Ashish9123/Cloud-DevOps-Project.git
 4. Script Path: jenkins/Jenkinsfile
 5. Save & Build
 ```
@@ -588,19 +588,19 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                buildImage('omarghalyy/cloud-devops-app', 'latest')
+                buildImage('Ashish9123/cloud-devops-app', 'latest')
             }
         }
         
         stage('Scan') {
             steps {
-                scanImage('omarghalyy/cloud-devops-app:latest')
+                scanImage('ashishcb/cloud-devops-app:latest')
             }
         }
         
         stage('Push') {
             steps {
-                pushImage('omarghalyy/cloud-devops-app', 'latest')
+                pushImage('ashishcb/cloud-devops-app', 'latest')
             }
         }
         
@@ -694,7 +694,7 @@ docker logs <CONTAINER_ID>
 
 # Rebuild
 docker system prune -a
-docker build -t omarghalyy/cloud-devops-app:latest .
+docker build -t ashishcb/cloud-devops-app:latest .
 ```
 
 #### 4. ArgoCD Sync Issues
