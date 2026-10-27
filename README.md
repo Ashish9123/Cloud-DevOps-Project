@@ -777,10 +777,9 @@ Contributions are welcome! Please follow these steps:
 
 ### Connect with Me
 
-- 🐙 **GitHub**: [@omar-ghaly](https://github.com/omar-ghaly)
-- 💼 **LinkedIn**: [Omar Ghaly](https://www.linkedin.com/in/omarghaly/)
-- 📧 **Email**: omarghaly2156@gmail.com
-- 🌐 **Project Repository**: [Cloud-DevOps-Project](https://github.com/omar-ghaly/Cloud-DevOps-Project)
+- 🐙 **GitHub**: [@Ashish kumar](https://github.com/Ashish9123)
+- 💼 **LinkedIn**: [Ashish kumar](https://linkedin.com/in/ashishkkumar91/)
+- 📧 **Email**: ashishcb035@gmail.com
 
 ---
 
@@ -801,11 +800,6 @@ Feel free to reach out via any of the channels above!
 
 ---
 
-## 📈 Project Stats
-
-![GitHub last commit](https://img.shields.io/github/last-commit/omar-ghaly/Cloud-DevOps-Project)
-![GitHub repo size](https://img.shields.io/github/repo-size/omar-ghaly/Cloud-DevOps-Project)
-![GitHub language count](https://img.shields.io/github/languages/count/omar-ghaly/Cloud-DevOps-Project)
 
 ---
 
